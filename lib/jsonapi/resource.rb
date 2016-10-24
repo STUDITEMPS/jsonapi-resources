@@ -733,7 +733,7 @@ module JSONAPI
 
         records = filter_records(filters, options)
 
-        sort_criteria = options.fetch(:sort_criteria) { [] }
+        sort_criteria = options.fetch(:sort_criteria) { nil }
         order_options = construct_order_options(sort_criteria)
         records = sort_records(records, order_options, context)
 
